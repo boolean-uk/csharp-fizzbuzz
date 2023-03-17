@@ -10,5 +10,5 @@
 - Implement the requirements listed in comments in the `Core.cs` file.  Also see the TODOs on the Task List.
 - When ready to test your solution, open the Test Explorer click "Run Test" button. 
 
-![](./assets/run-a-test.PNG)
+![](./assets/tests.JPG)
 
