@@ -8,7 +8,7 @@
 - Open the csharp-fizzbuzz.sln folder
 - observe 2 projects, Main and Test.
 - Implement the requirements listed in comments in the `Core.cs` file.  Also see the TODOs on the Task List.
-- When ready to test your solution, open the Test Explorer click "Run Test" button. 
+- When ready to test your solution, open the Test Explorer click "Run" button, or you can right click an individual test (or a group) to run, debug.
 
 ![](./assets/tests.JPG)
 
