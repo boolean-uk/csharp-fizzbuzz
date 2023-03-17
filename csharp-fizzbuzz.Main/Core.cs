@@ -20,7 +20,8 @@ namespace csharp_fizzbuzz.Main
         {
             throw new NotImplementedException();
 
-            /* TODO: Implement a function that will look through a list of String representation of numbers and
+            // TODO: 1. Implement a function that will look through a list of String representation of numbers and
+            /* 
                 change the values of said array based on the rules below
                 Where a number is a multiple of three (3, 6, 9, etc) the number in the array should be replaced the string "Fizz.
                 Where a number is a multiple of five (5, 10, etc) the number in the array should be replaced the string "Buzz".
