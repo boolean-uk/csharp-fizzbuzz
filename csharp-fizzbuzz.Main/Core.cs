@@ -20,7 +20,7 @@ namespace csharp_fizzbuzz.Main
 
         public String[] fizzbuzz(String[] nums)
         {
-           // TODO: 1. Implement a function that will look through a list of String representation of numbers and
+            // TODO: 1. Implement a function that will look through a list of String representation of numbers and
             /* 
                 change the values of said array based on the rules below
                 Where a number is a multiple of three (3, 6, 9, etc) the number in the array should be replaced the string "Fizz.
@@ -33,26 +33,26 @@ namespace csharp_fizzbuzz.Main
             //        int number = Int32.Parse(s); 
             //    }
             //    catch { }
-                int[] numberArray = new int[nums.Length];
-                for (int i = 0; i<= nums.Length; i++)
-                {
-                    numberArray[i] = int.Parse(nums[i]);
-                }
-            for (int i = 0; i <= numberArray.Length; i++)
+            int[] numberArray = new int[nums.Length];
+            for (int i = 0; i< nums.Length; i++)
+            {
+                numberArray[i] = int.Parse(nums[i]);
+            }
+            for (int i = 0; i < numberArray.Length; i++)
             {
                 if (numberArray[i] % 3 == 0)
                 {
-                    nums[i].Replace(nums[i], "Fizz");
-                        //replace with Fizz in nums
+                    //nums[i].Replace(nums[i], "Fizz");
+                    //replace with Fizz in nums
                 }
                 else if (numberArray[i] % 5 == 0)
                 {
-                    nums[i].Replace(nums[i], "Buzz");
+                    //nums[i].Replace(nums[i], "Buzz");
                     //replace with Buzz in nums
                 }
                 else if (numberArray[i] % 3 == 0 && numberArray[i] % 5 == 0)
                 {
-                    nums[i].Replace(nums[i], "Fizzbuzz");
+                    //nums[i].Replace(nums[i], "Fizzbuzz");
                     //replace with Fizzbuzz in nums
                 }
             }
