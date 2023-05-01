@@ -40,21 +40,26 @@ namespace csharp_fizzbuzz.Main
             }
             for (int i = 0; i < numberArray.Length; i++)
             {
-                if (numberArray[i] % 3 == 0)
+                if (numberArray[i] % 3 == 0 && numberArray[i] % 5 == 0)
                 {
+                    nums[i]= "Fizzbuzz";
+                    //nums[i].Replace(nums[i], "Fizzbuzz");
+                    //replace with Fizzbuzz in nums
+                    //need to put this one first?
+                }
+                else if (numberArray[i] % 3 == 0)
+                {
+                    nums[i] = "Fizz";
                     //nums[i].Replace(nums[i], "Fizz");
                     //replace with Fizz in nums
                 }
                 else if (numberArray[i] % 5 == 0)
                 {
+                    nums[i] = "Buzz";
                     //nums[i].Replace(nums[i], "Buzz");
                     //replace with Buzz in nums
                 }
-                else if (numberArray[i] % 3 == 0 && numberArray[i] % 5 == 0)
-                {
-                    //nums[i].Replace(nums[i], "Fizzbuzz");
-                    //replace with Fizzbuzz in nums
-                }
+                
             }
 
             return nums;
