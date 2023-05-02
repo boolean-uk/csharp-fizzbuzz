@@ -33,6 +33,15 @@ namespace csharp_fizzbuzz.Main
             //        int number = Int32.Parse(s); 
             //    }
             //    catch { }
+
+            /*
+             * need to add  
+             * int num;
+                bool isParsable = Int32.TryParse(nums[i], out num);
+
+                if (isParsable)
+            to make sure if the string contains something else than a number it doesn't crash
+             */
             int[] numberArray = new int[nums.Length];
             for (int i = 0; i< nums.Length; i++)
             {
