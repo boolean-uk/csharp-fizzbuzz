@@ -30,20 +30,30 @@ namespace csharp_fizzbuzz.Main
             * */
             for (int i = 0; i < nums.Length; i++)
             {
-                int num = int.Parse(nums[i]);
-                if (num % 3 == 0 && num % 5 == 0)
-                {
-                    nums[i] = "Fizzbuzz";
-                }
-                else if (num % 5 == 0) { 
-                    nums[i] = "Buzz";
 
-                }
-                else if (num % 3 == 0)
+                try
                 {
-                    nums[i] = "Fizz";
+                    int num = int.Parse(nums[i]);
+                    if (num % 3 == 0 && num % 5 == 0)
+                    {
+                        nums[i] = "Fizzbuzz";
+                    }
+                    else if (num % 5 == 0)
+                    {
+                        nums[i] = "Buzz";
 
+                    }
+                    else if (num % 3 == 0)
+                    {
+                        nums[i] = "Fizz";
+
+                    }
+                }catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                   // throw new NotImplementedException();
                 }
+               
                 
             }
 
