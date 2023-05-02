@@ -29,19 +29,25 @@ namespace csharp_fizzbuzz.Main
             * */
             for (int i = 0; i <= nums.Length - 1; i++)
             {
-                int converted = int.Parse(nums[i]);
-                if (converted % 3 == 0 && converted % 5 == 0)
+                //int converted = int.Parse(nums[i]);
+                bool checkResult = int.TryParse(nums[i], out int converted);
+                if (checkResult)
                 {
-                    nums[i] = "Fizzbuzz";
-                } else if (converted % 3 == 0) {
-                    nums[i] = "Fizz";
-                } else if (converted % 5 == 0) {
-                    nums[i] = "Buzz";
+                    if (converted % 3 == 0 && converted % 5 == 0)
+                    {
+                        nums[i] = "Fizzbuzz";
+                    }
+                    else if (converted % 3 == 0)
+                    {
+                        nums[i] = "Fizz";
+                    }
+                    else if (converted % 5 == 0)
+                    {
+                        nums[i] = "Buzz";
+                    }
                 }
+                
             }
-
-
-
             return nums;
         }
     }

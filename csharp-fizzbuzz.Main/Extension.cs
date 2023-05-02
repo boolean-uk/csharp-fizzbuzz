@@ -37,7 +37,6 @@ namespace csharp_fizzbuzz.Main
                     list.Add(i.ToString());
                 }
             }
-
             return list.ToArray();
         }
     }
