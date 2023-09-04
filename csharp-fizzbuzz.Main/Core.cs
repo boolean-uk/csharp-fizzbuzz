@@ -34,27 +34,7 @@ namespace csharp_fizzbuzz.Main
                 try  // https://www.w3schools.com/cs/cs_exceptions.php
                 {
                     int number = int.Parse(nums[i]); // if it isnt a valid intiger (like apple), the exeption will be trown.
-
-                    // Fizzbuzz check.
-                    if (number % 3 == 0 && number % 5 == 0)
-                    {
-                        result[i] = "Fizzbuzz";
-                    }
-                    // Fizz check.
-                    else if (number % 3 == 0)
-                    {
-                        result[i] = "Fizz";
-                    }
-                    //Buzz check.
-                    else if (number % 5 == 0)
-                    {
-                        result[i] = "Buzz";
-                    }
-                    // if its nothing "fizzy", keep number.
-                    else
-                    {
-                        result[i] = nums[i];
-                    }
+                    result[i] = GetFizzBuzz(number);
                 }
                 catch (FormatException)
                 {
@@ -64,6 +44,28 @@ namespace csharp_fizzbuzz.Main
                 }
             }
             return result;
+        }
+        public String GetFizzBuzz(int number)   //method to call in extension
+        {       // Fizzbuzz check.
+                if (number % 3 == 0 && number % 5 == 0)
+                    {
+                       return "Fizzbuzz";
+                    }
+                // Fizz check.
+                else if (number % 3 == 0)
+                    {
+                       return "Fizz";
+                    }
+                //Buzz check.
+                else if (number % 5 == 0)
+                    {
+                       return "Buzz";
+                    }
+                else
+                    {
+                       return number.ToString();
+                    }
+
         }
     }
 }
