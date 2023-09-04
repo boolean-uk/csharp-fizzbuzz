@@ -59,12 +59,7 @@ namespace csharp_fizzbuzz.Main
                 }
             }
 
-
-
-          
-
-
-            return nums;
+            return result;
         }
     }
 }
