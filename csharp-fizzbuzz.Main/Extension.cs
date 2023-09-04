@@ -10,7 +10,6 @@ namespace csharp_fizzbuzz.Main
     {
         public string[] fizzbuzz(int lower, int higher)
         {
-            throw new NotImplementedException();
 
             //TODO: Extension: Implement a function that will create a list of strings containing the numbers from the lower number to the higher number
             /* 
@@ -19,9 +18,25 @@ namespace csharp_fizzbuzz.Main
                 Where a number is a multiple of both five AND three (15, 30, etc) the array should contain the string "Fizzbuzz" instead of a number.
             * */
 
+            List<string> strings = new List<string>();
 
+            for (int n = lower; n <= higher; n++)
+            {
+                if (n % 3 == 0)
+                {
+                    strings.Add((n % 5 == 0) ? "Fizzbuzz" : "Fizz");
+                }
+                else if (n % 5 == 0)
+                {
+                    strings.Add("Buzz");
+                }
+                else
+                {
+                    strings.Add(n.ToString());
+                }
+            }
 
-            return null;
+            return strings.ToArray();
         }
     }
 }
