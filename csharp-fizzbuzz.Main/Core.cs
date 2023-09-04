@@ -58,7 +58,9 @@ namespace csharp_fizzbuzz.Main
                 }
                 catch (FormatException)
                 {
-                    throw new FormatException($"Number at index {i} is not a number.");
+                    //throw new FormatException($"Number at index {i} is not a number.");
+                    // changed throwing the exeption to setting the value as 'not an int' so the array does return
+                    result[i] = $"not an int, check input at index {i}";
                 }
             }
             return result;
