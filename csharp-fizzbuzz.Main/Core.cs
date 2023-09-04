@@ -31,9 +31,9 @@ namespace csharp_fizzbuzz.Main
             String[] result = new String[nums.Length];
             for (int i = 0; i < nums.Length; i++)
             {
-                int number = int.Parse(nums[i]); // if it isnt a valid intiger (like apple), the exeption will be trown.
                 try  // https://www.w3schools.com/cs/cs_exceptions.php
                 {
+                    int number = int.Parse(nums[i]); // if it isnt a valid intiger (like apple), the exeption will be trown.
 
                     // Fizzbuzz check.
                     if (number % 3 == 0 && number % 5 == 0)
