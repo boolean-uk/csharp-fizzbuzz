@@ -21,24 +21,33 @@ namespace csharp_fizzbuzz.Main
         {
             for (int i = 0; i < nums.Length; i++)
             {
-                int parsed = Int32.Parse(nums[i]);
+                int parsed;
+                try 
+                {
+                    parsed = Int32.Parse(nums[i]);
+                    if (parsed % 5 == 0 && parsed % 3 == 0)
+                    {
+                        nums[i] = "Fizzbuzz";
+                        continue;
+                    }
+                    if (parsed % 3 == 0)
+                    {
+                        nums[i] = "Fizz";
+                        continue;
+                    }
 
-                if (parsed % 5 ==0 && parsed % 3 == 0)
-                {
-                    nums[i] = "Fizzbuzz";
-                    continue;
+                    if (parsed % 5 == 0)
+                    {
+                        nums[i] = "Buzz";
+                        continue;
+                    }
+                    nums[i] = nums[i];
                 }
-                if (parsed % 3 == 0)
-                {
-                    nums[i] = "Fizz";
-                    continue;
+                catch (Exception ex){ Console.WriteLine(ex);
                 }
-                   
-                if (parsed % 5 == 0)
-                { nums[i] = "Buzz";
-                    continue;
-                }
-                nums[i] = nums[i];        
+                
+
+       
 
             }
 
