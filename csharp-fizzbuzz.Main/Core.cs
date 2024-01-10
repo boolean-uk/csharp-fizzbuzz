@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace csharp_fizzbuzz.Main
 {
@@ -18,7 +19,6 @@ namespace csharp_fizzbuzz.Main
 
         public String[] fizzbuzz(String[] nums)
         {
-            throw new NotImplementedException();
 
             // TODO: 1. Implement a function that will look through a list of String representation of numbers and
             /* 
@@ -27,10 +27,33 @@ namespace csharp_fizzbuzz.Main
                 Where a number is a multiple of five (5, 10, etc) the number in the array should be replaced the string "Buzz".
                 Where a number is a multiple of both five AND three (15, 30, etc) the number in the array should be replaced the string "Fizzbuzz".
             * */
-
-
-
-            return nums;
+            string[] retValue = new string[nums.Length];
+            for (int i = 0; i < nums.Length; i++) 
+            {
+                string res = "";
+                try
+                {
+                    int value = int.Parse(nums[i]);
+                if ((value % 3) == 0) 
+                {
+                    res += "Fizz";
+                }
+                if ((value % 5) == 0) 
+                {
+                    res += res.Length == 0 ? "Buzz" : "buzz";
+                }
+                if (res.Length == 0) 
+                {
+                    res = nums[i];
+                }
+                retValue[i] = res;
+                }
+                catch
+                {
+                    retValue[i] = nums[i];
+                }
+            }
+            return retValue;
         }
     }
 }
