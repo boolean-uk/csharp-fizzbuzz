@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,7 +19,37 @@ namespace csharp_fizzbuzz.Main
 
         public String[] fizzbuzz(String[] nums)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < nums.Length; i++)
+            {
+                int parsed;
+                try 
+                {
+                    parsed = Int32.Parse(nums[i]);
+                    if (parsed % 5 == 0 && parsed % 3 == 0)
+                    {
+                        nums[i] = "Fizzbuzz";
+                        continue;
+                    }
+                    if (parsed % 3 == 0)
+                    {
+                        nums[i] = "Fizz";
+                        continue;
+                    }
+
+                    if (parsed % 5 == 0)
+                    {
+                        nums[i] = "Buzz";
+                        continue;
+                    }
+                    nums[i] = nums[i];
+                }
+                catch (Exception ex){ Console.WriteLine(ex);
+                }
+                
+
+       
+
+            }
 
             // TODO: 1. Implement a function that will look through a list of String representation of numbers and
             /* 
