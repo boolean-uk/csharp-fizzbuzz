@@ -18,7 +18,6 @@ namespace csharp_fizzbuzz.Main
 
         public String[] fizzbuzz(String[] nums)
         {
-            throw new NotImplementedException();
 
             // TODO: 1. Implement a function that will look through a list of String representation of numbers and
             /* 
@@ -28,6 +27,20 @@ namespace csharp_fizzbuzz.Main
                 Where a number is a multiple of both five AND three (15, 30, etc) the number in the array should be replaced the string "Fizzbuzz".
             * */
 
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (!int.TryParse(nums[i], out int num))
+                {
+                    throw new Exception("Invalid input");
+                }
+
+                bool fizz = num % 3 == 0;
+                bool buzz = num % 5 == 0;
+
+                if (buzz && fizz) nums[i] = "Fizzbuzz";
+                else if (buzz) nums[i] = "Buzz";
+                else if (fizz) nums[i] = "Fizz";
+            }
 
 
             return nums;
