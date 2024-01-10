@@ -44,7 +44,7 @@ namespace csharp_fizzbuzz.Main
                         nums[i] = "Fizz";
                     }
                 }
-                catch (Exception NumberFormatException)
+                catch (FormatException e)
                 {
                     Console.WriteLine("Non number detected in array!");
                     throw;
