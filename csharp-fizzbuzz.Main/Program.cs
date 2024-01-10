@@ -1,2 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using csharp_fizzbuzz.Main;
+
+Core core = new Core();
+Extension extension = new Extension();
