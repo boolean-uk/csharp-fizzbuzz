@@ -10,7 +10,20 @@ namespace csharp_fizzbuzz.Main
     {
         public string[] fizzbuzz(int lower, int higher)
         {
-            throw new NotImplementedException();
+            List<string> number = new List<string>();
+            for (int i = lower; i <= higher; i++)
+            {
+                if ((i) % 3 == 0 && (i) % 5 == 0)
+                    number.Add("Fizzbuzz");
+                else if ((i) % 3 == 0)
+                    number.Add("Fizz");
+                else if ((i) % 5 == 0)
+                    number.Add("Buzz");
+                else
+                    number.Add((i).ToString());
+            }
+
+            return number.ToArray();
 
             //TODO: Extension: Implement a function that will create a list of strings containing the numbers from the lower number to the higher number
             /* 
@@ -21,7 +34,7 @@ namespace csharp_fizzbuzz.Main
 
 
 
-            return null;
+            
         }
     }
 }
