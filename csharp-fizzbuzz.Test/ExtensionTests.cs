@@ -14,7 +14,7 @@ namespace csharp_fizzbuzz.Test
         public void fizzbuzz()
         {
             Extension extension = new Extension();
-            String[] shouldBeOne = { "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "Fizzbuzz" };
+            String[] shouldBeOne = { "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz" };
             Assert.AreEqual(shouldBeOne, extension.fizzbuzz(1, 15));
         }
     }
