@@ -18,7 +18,7 @@ namespace csharp_fizzbuzz.Main
 
         public String[] fizzbuzz(String[] nums)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
 
             // TODO: 1. Implement a function that will look through a list of String representation of numbers and
             /* 
@@ -28,7 +28,40 @@ namespace csharp_fizzbuzz.Main
                 Where a number is a multiple of both five AND three (15, 30, etc) the number in the array should be replaced the string "Fizzbuzz".
             * */
 
+            //throw new NumberFormatException();
+            for (int i = 0; i < nums.Length; i++)
+            {
 
+                //Using try-catch to detect the conversion of string to int:
+                try
+                {
+                    //Convert string to int:
+                    int realNum = Convert.ToInt32(nums[i]);
+
+                    if (realNum % 3 == 0 && realNum % 5 == 0)
+                    {
+                        nums[i] = "Fizzbuzz";
+                    }
+                    else if (realNum % 3 == 0)
+                    {
+                        nums[i] = "Fizz";
+                    }
+                    else if (realNum % 5 == 0)
+                    {
+                        nums[i] = "Buzz";
+                    }
+                    else
+                    {
+                        nums[i] = nums[i];
+                    }
+                  
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Cannot convert non-int string");
+                   
+                }
+            }
 
             return nums;
         }
