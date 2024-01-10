@@ -32,8 +32,10 @@ namespace csharp_fizzbuzz.Main
                 string result = "";
                 int curNum = int.Parse(nums[i]);
 
-                if (curNum % 3 == 0) result += ("Fizz");
-                if (curNum % 5 == 0) result += ("Buzz");
+                if (curNum % 3 == 0) result = ("Fizz");
+                if (curNum % 5 == 0) result = ("Buzz");
+                if (curNum % 15 == 0) result = "Fizzbuzz";
+
 
                 if (result != "") nums[i] = result;
             }

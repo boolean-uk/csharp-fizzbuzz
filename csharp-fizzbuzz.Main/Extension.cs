@@ -22,8 +22,10 @@ namespace csharp_fizzbuzz.Main
             {
                 string output = "";
 
-                if (i % 3 == 0) output += "Fizz";
-                if (i % 5 == 0) output += "Buzz";
+                if (i % 3 == 0) output = "Fizz";
+                if (i % 5 == 0) output = "Buzz";
+                if (i % 15 == 0) output = "Fizzbuzz";
+
                 if (output == "") output += $"{i}";
                 nums.Add(output);
             }
