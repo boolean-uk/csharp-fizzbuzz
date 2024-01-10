@@ -18,7 +18,26 @@ namespace csharp_fizzbuzz.Main
 
         public String[] fizzbuzz(String[] nums)
         {
-            throw new NotImplementedException();
+            int intnum;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                bool parsed  = int.TryParse( nums[i], out intnum);
+                if (parsed)
+                {
+                    if (intnum % 3 == 0 && intnum % 5 == 0)
+                    {
+                        nums[i] = "Fizzbuzz";
+                    }
+                    else if (intnum % 3 == 0)
+                    {
+                        nums[i] = "Fizz";
+                    }
+                    else if (intnum % 5 == 0)
+                    {
+                        nums[i] = "Buzz";
+                    }
+                }
+            }
 
             // TODO: 1. Implement a function that will look through a list of String representation of numbers and
             /* 
