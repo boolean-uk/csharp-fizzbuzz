@@ -34,19 +34,19 @@ namespace csharp_fizzbuzz.Main
                 try
                 {
                     int value = int.Parse(nums[i]);
-                if ((value % 3) == 0) 
-                {
+                    if ((value % 3) == 0) 
+                    {
                     res += "Fizz";
-                }
-                if ((value % 5) == 0) 
-                {
-                    res += res.Length == 0 ? "Buzz" : "buzz";
-                }
-                if (res.Length == 0) 
-                {
-                    res = nums[i];
-                }
-                retValue[i] = res;
+                    }
+                    if ((value % 5) == 0) 
+                    {
+                        res += res.Length == 0 ? "Buzz" : "buzz";
+                    }
+                    if (res.Length == 0) 
+                    {
+                        res = nums[i];
+                    }
+                    retValue[i] = res;
                 }
                 catch
                 {
