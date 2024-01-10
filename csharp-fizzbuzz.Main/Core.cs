@@ -18,8 +18,28 @@ namespace csharp_fizzbuzz.Main
 
         public String[] fizzbuzz(String[] nums)
         {
-            throw new NotImplementedException();
 
+            for (int i = 0; i < nums.Length; i++)
+            {
+                try
+                {
+                    string replacementString = "";
+                    int number = Int32.Parse(nums[i]);
+                    if (number % 3 == 0)
+                    {
+                        replacementString = replacementString + "Fizz";
+                    } 
+                    if(number % 5 == 0)
+                    {
+                        replacementString = replacementString + "Buzz";
+                    }
+                    nums[i] = char.ToUpper(replacementString[0]) + replacementString.Substring(1).ToLower();
+                } catch(Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                    // code to handle the exception, or simply print out the exception message, or do nothing
+                };
+            }
             // TODO: 1. Implement a function that will look through a list of String representation of numbers and
             /* 
                 change the values of said array based on the rules below
