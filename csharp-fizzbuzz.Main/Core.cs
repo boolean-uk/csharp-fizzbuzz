@@ -15,22 +15,40 @@ namespace csharp_fizzbuzz.Main
         // As you will need to convert a String to an Int, there is a chance an error could happen.
         // If, for example, the provided input looked like ["1", "2", "apple", "15"], we would get an error trying to convert "apple" into an integer
 
-
+        // TODO: 1. Implement a function that will look through a list of String representation of numbers and
+        /* 
+            change the values of said array based on the rules below
+            Where a number is a multiple of three (3, 6, 9, etc) the number in the array should be replaced the string "Fizz.
+            Where a number is a multiple of five (5, 10, etc) the number in the array should be replaced the string "Buzz".
+            Where a number is a multiple of both five AND three (15, 30, etc) the number in the array should be replaced the string "Fizzbuzz".
+        * */
         public String[] fizzbuzz(String[] nums)
         {
-            throw new NotImplementedException();
-
-            // TODO: 1. Implement a function that will look through a list of String representation of numbers and
-            /* 
-                change the values of said array based on the rules below
-                Where a number is a multiple of three (3, 6, 9, etc) the number in the array should be replaced the string "Fizz.
-                Where a number is a multiple of five (5, 10, etc) the number in the array should be replaced the string "Buzz".
-                Where a number is a multiple of both five AND three (15, 30, etc) the number in the array should be replaced the string "Fizzbuzz".
-            * */
-
-
-
+            for (int i = 0; i < nums.Count(); i++)
+            {
+                try
+                {
+                    int numInt = Int32.Parse(nums[i]);
+                    if (numInt % 15 == 0)
+                    {
+                        nums[i] = "Fizzbuzz";
+                    }
+                    else if (numInt % 5 == 0)
+                    {
+                        nums[i] = "Buzz";
+                    }
+                    else if (numInt % 3 == 0)
+                    {
+                        nums[i] = "Fizz";
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+            }
             return nums;
         }
     }
 }
+        
