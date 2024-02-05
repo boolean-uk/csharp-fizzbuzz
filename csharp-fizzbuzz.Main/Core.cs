@@ -16,9 +16,7 @@ namespace csharp_fizzbuzz.Main
         // If, for example, the provided input looked like ["1", "2", "apple", "15"], we would get an error trying to convert "apple" into an integer
 
 
-        public String[] fizzbuzz(String[] nums)
-        {
-            throw new NotImplementedException();
+        public String[] fizzbuzz(String[] nums) { 
 
             // TODO: 1. Implement a function that will look through a list of String representation of numbers and
             /* 
@@ -27,9 +25,26 @@ namespace csharp_fizzbuzz.Main
                 Where a number is a multiple of five (5, 10, etc) the number in the array should be replaced the string "Buzz".
                 Where a number is a multiple of both five AND three (15, 30, etc) the number in the array should be replaced the string "Fizzbuzz".
             * */
-
-
-
+            for(int i = 0; i < nums.Length; i++)
+            {
+                // to convert strings to integers
+                int num = int.Parse(nums[i]);
+                if (num % 3 == 0 && num % 5 == 0)
+                {
+                    // the index of nums will be replaced for FizzBuzz
+                    nums[i] = "FizzBuzz";
+                }
+                else if (num % 3  == 0) 
+                {
+                    // the index of nums will be replaced for Fizz
+                    nums[i] = "Fizz";
+                } 
+                else if (num % 5  == 0)
+                {
+                    // the index of nums will be replaced for Buzz
+                   nums[i] = "Buzz";
+                } 
+            }
             return nums;
         }
     }
