@@ -6,22 +6,19 @@ using System.Threading.Tasks;
 
 namespace csharp_fizzbuzz.Main
 {
-    public class Extension
-    {
-        public string[] fizzbuzz(int lower, int higher)
+        public class Extension
         {
-            throw new NotImplementedException();
+        private Core core = new Core(); // keeping it private to practice so only methods in the extension can acces it. -> encapsulation
+            public string[] fizzbuzz(int lower, int higher)
+            {
+            // Used https://learn.microsoft.com/en-us/dotnet/api/system.linq.enumerable.range?view=net-7.0 for generating the array low to high
+            int[] numbers = Enumerable.Range(lower, higher - lower + 1).ToArray();
+            // Used https://learn.microsoft.com/en-us/dotnet/api/system.linq.enumerable.select?view=net-7.0 for converting int to string array
+            string[] stringNumbers = numbers.Select(n => n.ToString()).ToArray();
+            // Using fizzbuzz from core and returning it
+            return core.fizzbuzz(stringNumbers);
 
-            //TODO: Extension: Implement a function that will create a list of strings containing the numbers from the lower number to the higher number
-            /* 
-                Where a number is a multiple of three (3, 6, 9, etc) the array should contain the string "Fizz" instead of a number.
-                Where a number is a multiple of five (5, 10, etc) the array should contain the string "Buzz" instead of a number.
-                Where a number is a multiple of both five AND three (15, 30, etc) the array should contain the string "Fizzbuzz" instead of a number.
-            * */
-
-
-
-            return null;
         }
     }
-}
+    }
+
